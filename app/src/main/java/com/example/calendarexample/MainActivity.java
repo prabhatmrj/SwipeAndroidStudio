@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
         this.gestureDetector=new GestureDetector(MainActivity.this,this);
 
 
+
+
+
     }
 
     @Override
@@ -46,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements GestureDetector.O
                 if (Math.abs(valuX)>MIN_DISTANCE){
                     if (x2>x1){
                         Toast.makeText(this, "RigthSwipe", Toast.LENGTH_SHORT).show();
-
+                        startActivity(new Intent(MainActivity.this,HeaderToolBar.class));
                     }
                     else {
                         startActivity(new Intent(MainActivity.this,Test.class));
